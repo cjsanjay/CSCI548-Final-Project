@@ -48,7 +48,7 @@
                             <table  width="100%">
                                  <tr><td class="dish_name" width="50%"><p>{{item['_source']['dish_name']}}</p></td><td class="dish_price"><p>{{item['_source']['dish_price']}}</p></td></tr>
                                  <tr><td class="dish_description"><p>{{item['_source']['dish_description']}}</p></td><td class="res_rating"><p>Rating: {{item['_source']['res_rating']}}</p></td></tr>
-                                 <tr><td class="res_name"><p>{{item['_source']['res_name']}}</p></td><td class="distance"><p> {{item['_score']}} Miles</p></td></tr>
+                                 <tr><td class="res_name"><p>{{item['_source']['res_name']}}</p></td><td class="distance"><p> {{item['_score']}} {{item['sort'][0]}}Miles</p></td></tr>
                             </table>
                           </div>
                       </td>  

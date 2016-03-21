@@ -116,16 +116,8 @@ EsConnector.controller('QueryController', function($scope, es) {
                                             "unit":          "mi", 
                                             "distance_type": "plane" 
                                           }
-                                        },"_score"
-                                    ],"script_fields" : {
-                                  "distance" : {
-                                     "params" : {
-                                        "lat" : parseFloat(latitude),
-                                        "lon" : parseFloat(longitude)
-                                     },
-                                     "script" : "doc['location'].distanceInMiles(lat, lon)"
-                                  }
-                               }
+                                        }
+                                    ]
                             }
                             }).then(function (response) {
                               $scope.hits = response.hits.hits;
